@@ -24,7 +24,7 @@
 export default {
   mounted () {
     this.$bus.$on('modal-open', (args) => {
-      // TODO: args가 올바른지 확인해야함
+      // TODO: args需要验证是否正确
       this.type = args.type
       this.title = args.title
       this.description = args.description

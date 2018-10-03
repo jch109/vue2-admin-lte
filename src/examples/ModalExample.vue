@@ -19,21 +19,21 @@ export default {
       console.log(this.$bus)
       this.$bus.$emit('modal-open', {
         title: 'Hello',
-        description: '내용',
+        description: '内容',
         type: 'modal-primary',
-        confirmText: '저장 후 닫기',
-        cancelText: '닫기',
+        confirmText: '保存并关闭',
+        cancelText: '关闭',
         confirmBefore: () => {
-          window.alert('저장 후 닫기 이전 훅')
+          window.alert('保存后关闭前钩子函数')
         },
         confirmAfter: () => {
-          window.alert('저장 후 닫기 이후 훅')
+          window.alert('保存后关闭后钩子函数')
         },
         cancelBefore: () => {
-          window.alert('닫기 이전 훅')
+          window.alert('关闭前钩')
         },
         cancelAfter: () => {
-          window.alert('닫기 이후 훅')
+          window.alert('关闭后钩子函数')
         }
       })
     }
